@@ -1,23 +1,27 @@
 import React from 'react';
-// import LogoImg from './Logo.svg';
-
+import {Link} from 'react-router-dom';
+import bannerImg from "../images/restauranfood.jpg";
 
 const Header = () => {
   return (
-    <nav>
-    <ul>
-        <li> <img src="./assets/Logo.svg" alt="Logo Image Little Lemon Restaurant"/></li>
-      <li><a href="./Home" role="button">Home</a></li>
-      <li><a href="./Home" role="button">About</a></li>
-      <li><a href="./Home" role="button">Menu</a></li>
-      <li><a href="./Home" role="button">Reservation</a></li>
-      <li><a href="./Home" role="button">Order Online</a></li>
-      <li><a href="./Home" role="button">Login</a></li>
+    <div className='header'>
+        <section>
+            <div className='banner'>
+                <h2>Little Lemon</h2>
+                <h3>Chicago</h3>
+                <p>Indulge in Mediterranean flavors at our restaurant. 
+                    Experience the vibrant tastes of Greece, Italy, Spain,
+                     and more, expertly crafted with fresh ingredients. Dive into a culinary
+                     journey that celebrates tradition and passion.</p>
+                <Link to="/booking"><button aria-label='on Click'>Reserve Table</button></Link>
+            </div>
+            <div className='banner-img'>
+                <img src={bannerImg} alt="banner" />
+            </div>
 
-    </ul>
-    </nav>
-  )
-}
+        </section>
+        </div>
+  );
+};
 
 export default Header
-
